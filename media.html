@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Media Background</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+      padding-top: 20%;
+      background-image: url('https://via.placeholder.com/800x600');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: lightblue;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-color: hotpink;
+        background-size: contain;
+      }
+    }
+
+    @media (min-width: 769px) {
+      body {
+        background-color: teal;
+        background-size: cover;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello Media!</h1>
+  <p>Screen size changes background color & image size.</p>
+</body>
+</html>

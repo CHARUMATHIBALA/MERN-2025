@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Grid</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 100px 100px 100px 100px;
+      grid-template-rows: 100px 100px 100px 100px;
+      gap: 10px;
+      height: 100%;
+      padding: 10px;
+    }
+
+    .header {
+      grid-column: 1 / 5;
+    }
+
+    .aside {
+      grid-column: 1 / 4;
+      grid-row: 2 / 4; /* Section takes 2 rows */
+    }
+
+    .section {
+      grid-column: 4 / 5;
+      grid-row: 2 / 4; /* Aside takes 2 rows */
+    }
+
+    .footer {
+      grid-column: 1 / 5;
+      grid-row: 4 / 5;
+    }
+
+    .child {
+      border: 2px solid black;
+      background-color: hotpink;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header child"></div>
+    <div class="aside child"></div>
+    <div class="section child"></div>
+    <div class="footer child"></div>
+  </div>
+</body>
+</html>

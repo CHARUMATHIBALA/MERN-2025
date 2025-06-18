@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Change Text and Add Items</title>
+</head>
+<body>
+  <h1 id="header">Hello world</h1>
+
+  <!-- Buttons to change text and style -->
+  <button onclick="changeText()">Change Text</button>
+  <button onclick="changeStyle()">Change Color & Size</button>
+
+  <hr>
+
+  <!-- Input and button to add to list -->
+  <input type="text" id="itemInput" placeholder="Enter item" />
+  <button onclick="addItem()">Add to List</button>
+
+  <!-- Unordered List -->
+  <ul id="itemList"></ul>
+
+  <script>
+    function changeText() {
+      const data = document.getElementById("header");
+      data.innerHTML = "HELLO KONGU ENGINEERING";
+    }
+
+    function changeStyle() {
+      const data = document.getElementById("header");
+      data.style.color = "hotpink";
+      data.style.fontSize = "50px";
+    }
+
+    function addItem() {
+      const input = document.getElementById("itemInput");
+      const newItem = input.value;
+
+      const li = document.createElement("li");
+      li.textContent = newItem;
+      document.getElementById("itemList").appendChild(li);
+      input.value = ""; // clear input
+    }
+  </script>
+</body>
+</html>
