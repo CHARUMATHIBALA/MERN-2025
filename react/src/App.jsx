@@ -13,6 +13,8 @@ import State from './Hooks/State.jsx';
 import  Effect from './Hooks/Effect.jsx';
 import Login from './pages/Login.jsx';
 import Signup from './pages/Signup.jsx';
+import Ref from './Hooks/Ref.jsx';
+import Reducer from './Hooks/Reducer.jsx';
 
 
 
@@ -45,6 +47,8 @@ const App = () => {
            <Route path='/effect'element={<Effect/>}/>
            <Route path='/Login'element={<Login/>}/>
             <Route path='/Signup'element={<Signup/>}/>
+           <Route path='/ref'element={<Ref/>}/>
+           <Route path='/reducer'element={<Reducer/>}/>
 
 
 
